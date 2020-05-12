@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Илья Кармаев](https://up.htmlacademy.ru/htmlcss/28/user/190018).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Поданев](https://htmlacademy.ru/profile/mpodanev).
 
 ---
 

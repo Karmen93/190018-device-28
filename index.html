@@ -8,11 +8,18 @@
 
 <body>
     <header>
-        <nav>
+        <nav aria-label="Главное меню">
             <a>
                 <img src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина гаджетов «Device»">
             </a>
             <ul>
+                <li>
+                    <form action="" method="get">
+                        <label class="visually-hidden" for="site-search">Поиск по сайту</label>
+                        <input type="search" name="search" id="site-search" placeholder="Поиск по сайту">
+                        <button class="visually-hidden" type="submit">Найти</button>
+                    </form>
+                </li>
                 <li>
                     <a href="">Войти</a>
                 </li>
@@ -26,6 +33,34 @@
             <ul>
                 <li>
                     <a href="">Каталог товаров</a>
+                    <ul aria-label="Меню каталога товаров">
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="">Виртуальная реальность</a>
+                                </li>
+                                <li>
+                                    <a href="catalog.html">Моноподы для селфи</a>
+                                </li>
+                                <li>
+                                    <a href="">Экшен-камеры</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="">Фитнес-браслеты</a>
+                                </li>
+                                <li>
+                                    <a href="">Умные часы</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Квадракоптеры</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="">Доставка</a>
@@ -40,9 +75,9 @@
         </nav>
     </header>
     <main>
-        <h1>Главная страница магазина гаджетов "Device"</h1>
+        <h1 class="visually-hidden">Главная страница магазина гаджетов "Device"</h1>
         <section>
-            <h2>Промо-слайдер</h2>
+            <h2 class="visually-hidden">Промо-слайдер</h2>
             <ul>
                 <li>
                     <article>
@@ -110,7 +145,7 @@
             </ul>
         </section>
         <section>
-            <h2>Категории товаров</h2>
+            <h2 class="visually-hidden">Категории товаров</h2>
             <ul>
                 <li>
                     <a href="">
@@ -145,7 +180,7 @@
             </ul>
         </section>
         <section>
-            <h2>Преимущества</h2>
+            <h2 class="visually-hidden">Преимущества</h2>
             <ul>
                 <li>
                     <a href="">Доставка</a>
@@ -179,7 +214,7 @@
             </ul>
         </section>
         <section>
-            <h2>Популярные бренды</h2>
+            <h2 class="visually-hidden">Популярные бренды</h2>
             <ul>
                 <li>
                     <a href="">
@@ -273,6 +308,34 @@
             <img src="img/logo-html.svg" width="27" height="34" alt="Логотип HtmlAcademy">
         </a>
     </footer>
+    <section>
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <form action="" method="post">
+            <p>
+                <label for="feedback-name">Ваше имя:</label>
+                <input type="text" name="fullname" id="feedback-name" placeholder="Имя Фамилия" required>
+            </p>
+            <p>
+                <label for="feedback-email">Ваш e-mail:</label>
+                <input type="email" name="email" id="feedback-email" placeholder="email@example.com" required>
+            </p>
+            <p>
+                <label for="feedback-message">Текст письма:</label>
+                <textarea name="message" id="feedback-message" cols="" rows="" placeholder="В свободной форме" required></textarea>
+            </p>
+            <button type="submit">Отправить</button>
+        </form>
+        <button type="button">
+            <span class="visually-hidden">Закрыть</span>
+        </button>
+    </section>
+    <section>
+        <h2 class="visually-hidden">Карта проезда</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931582563!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2sde!4v1590160924040!5m2!1sru!2sde" width="994" height="593" frameborder="0" tabindex="0" allowfullscreen></iframe>
+        <button type="button">
+            <span class="visually-hidden">Закрыть</span>
+        </button>
+    </section>
 </body>
 
 </html>

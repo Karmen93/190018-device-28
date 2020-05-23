@@ -12,14 +12,12 @@
             <a>
                 <img src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина гаджетов «Device»">
             </a>
+            <form action="https://echo.htmlacademy.ru" method="get">
+                <label class="visually-hidden" for="site-search">Поиск по сайту</label>
+                <input type="search" name="search" id="site-search" placeholder="Поиск по сайту">
+                <button class="visually-hidden" type="submit">Найти</button>
+            </form>
             <ul>
-                <li>
-                    <form action="" method="get">
-                        <label class="visually-hidden" for="site-search">Поиск по сайту</label>
-                        <input type="search" name="search" id="site-search" placeholder="Поиск по сайту">
-                        <button class="visually-hidden" type="submit">Найти</button>
-                    </form>
-                </li>
                 <li>
                     <a href="">Войти</a>
                 </li>
@@ -78,6 +76,26 @@
         <h1 class="visually-hidden">Главная страница магазина гаджетов "Device"</h1>
         <section>
             <h2 class="visually-hidden">Промо-слайдер</h2>
+            <input class="visually-hidden" type="radio" name="promo-slider-group" id="promo-slide-1" value="promo-slide-1">
+            <input class="visually-hidden" type="radio" name="promo-slider-group" id="promo-slide-2" value="promo-slide-2">
+            <input class="visually-hidden" type="radio" name="promo-slider-group" id="promo-slide-3" value="promo-slide-3" checked>
+            <ul>
+                <li>
+                    <label for="promo-slide-1">
+                        <span class="visually-hidden">Первый слайд: самая длинная палка для селфи</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="promo-slide-2">
+                        <span class="visually-hidden">Второй слайд: мотивирующий фитнес-браслет</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="promo-slide-3">
+                        <span class="visually-hidden">Третий слайд: квадракоптер с мощным лазером</span>
+                    </label>
+                </li>
+            </ul>
             <ul>
                 <li>
                     <article>
@@ -310,7 +328,7 @@
     </footer>
     <section>
         <h2 class="visually-hidden">Форма обратной связи</h2>
-        <form action="" method="post">
+        <form action="https://echo.htmlacademy.ru" method="post">
             <p>
                 <label for="feedback-name">Ваше имя:</label>
                 <input type="text" name="fullname" id="feedback-name" placeholder="Имя Фамилия" required>

@@ -12,14 +12,12 @@
             <a href="index.html">
                 <img src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина гаджетов «Device»">
             </a>
+            <form action="https://echo.htmlacademy.ru" method="get">
+                <label class="visually-hidden" for="site-search">Поиск по сайту</label>
+                <input type="search" name="search" id="site-search" placeholder="Поиск по сайту">
+                <button class="visually-hidden" type="submit">Найти</button>
+            </form>
             <ul>
-                <li>
-                    <form action="" method="get">
-                        <label class="visually-hidden" for="site-search">Поиск по сайту</label>
-                        <input type="search" name="search" id="site-search" placeholder="Поиск по сайту">
-                        <button class="visually-hidden" type="submit">Найти</button>
-                    </form>
-                </li>
                 <li>
                     <a href="">Валентин Петухов</a>
                     <a href="">Выйти</a>
@@ -92,6 +90,9 @@
             <h2>Фильтр:</h2>
             <form action="https://echo.htmlacademy.ru" method="get">
                 <fieldset>
+                    <legend>Стоимость</legend>
+                </fieldset>
+                <fieldset>
                     <legend>Цвет</legend>
                     <ul>
                         <li>
@@ -148,10 +149,10 @@
             </ul>
             <ul>
                 <li>
-                    <a href="">Вверх</a>
+                    <a class="visually-hidden" href="">Вверх</a>
                 </li>
                 <li>
-                    <a href="">Вниз</a>
+                    <a class="visually-hidden" href="">Вниз</a>
                 </li>
             </ul>
             <ul>

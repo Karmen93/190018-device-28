@@ -80,7 +80,7 @@
     </div>
     <main>
         <h1 class="visually-hidden">Главная страница магазина гаджетов "Device"</h1>
-        <section class="promo">
+        <section class="promo container">
             <h2 class="visually-hidden">Промо-слайдер</h2>
             <input class="visually-hidden" type="radio" name="promo-slider-group" id="promo-slide-1" value="promo-slide-1">
             <input class="visually-hidden" type="radio" name="promo-slider-group" id="promo-slide-2" value="promo-slide-2">
@@ -104,71 +104,83 @@
             </ul>
             <ul class="list promo-product-list">
                 <li class="promo-product-item">
-                    <article>
-                        <img class="promo-product-img" src="img/promo-item-1.png" width="384" height="486" alt="Самая длинная палка для селфи">
-                        <span class="promo-product-number">01</span>
-                        <h3 class="promo-product-title">Делай селфи, <br>
-                            как Бен Стиллер! </h3>
-                        <p class="promo-product-text">Самая длинная палка для селфи доступна в нашем магазине.
-                            Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                        <a class="button" href="">Подробнее</a>
-                        <table class="property-table">
-                            <tr class="property-description">
-                                <td class="item-property property-description-item">8,5 м</td>
-                                <td class="item-property property-description-item">5 кг</td>
-                                <td class="item-property property-description-item">Карбон</td>
-                            </tr>
-                            <tr class="property-definition">
-                                <td class="item-property property-definition-item">Длина палки</td>
-                                <td class="item-property property-definition-item">Вес палки</td>
-                                <td class="item-property property-definition-item">Материал</td>
-                            </tr>
-                        </table>
+                    <article class="promo-product-card">
+                        <div class="promo-product-wrapper">
+                            <img class="promo-product-img" src="img/promo-item-1.png" width="384" height="486" alt="Самая длинная палка для селфи">
+                        </div>
+                        <div class="promo-product-wrapper promo-product-description">
+                            <span class="promo-product-number visually-hidden">01</span>
+                            <h3 class="promo-product-title">Делай селфи, <br>
+                                как Бен Стиллер! </h3>
+                            <p class="promo-product-text">Самая длинная палка для селфи доступна в нашем магазине. <br>
+                                Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                            <a class="button promo-product-button" href="">Подробнее</a>
+                            <table class="property-table">
+                                <tr class="property-description">
+                                    <td class="item-property property-description-item">8,5 м</td>
+                                    <td class="item-property property-description-item">5 кг</td>
+                                    <td class="item-property property-description-item">Карбон</td>
+                                </tr>
+                                <tr class="property-definition">
+                                    <td class="item-property property-definition-item">Длина палки</td>
+                                    <td class="item-property property-definition-item">Вес палки</td>
+                                    <td class="item-property property-definition-item">Материал</td>
+                                </tr>
+                            </table>
+                        </div>
                     </article>
                 </li>
                 <li class="promo-product-item">
-                    <article>
-                        <img class="promo-product-img" src="img/promo-item-2.png" width="345" height="485" alt="Фитнес-браслет">
-                        <span class="promo-product-number">02</span>
-                        <h3 class="promo-product-title">Худеем <br>
-                            правильно!</h3>
-                        <p class="promo-product-text">Мотивирующие фитнес-браслеты помогут найти в себе силы
-                            не пропускать занятия и соблюдать диету.</p>
-                        <a class="button" href="">Подробнее</a>
-                        <table class="property-table">
-                            <tr class="property-description">
-                                <td class="property-description-item">48 часов</td>
-                            </tr>
-                            <tr class="property-definition">
-                                <td class="property-definition-item">Без подзарядки</td>
-                            </tr>
-                        </table>
+                    <article class="promo-product-card">
+                        <div class="promo-product-wrapper">
+                            <img class="promo-product-img" src="img/promo-item-2.png" width="345" height="485" alt="Фитнес-браслет">
+                        </div>
+                        <div class="promo-product-wrapper promo-product-description">
+                            <span class="promo-product-number visually-hidden">02</span>
+                            <h3 class="promo-product-title">Худеем <br>
+                                правильно!</h3>
+                            <p class="promo-product-text">Мотивирующие фитнес-браслеты помогут найти в себе силы
+                                не пропускать занятия и соблюдать диету.</p>
+                            <a class="button promo-product-button" href="">Подробнее</a>
+                            <table class="property-table">
+                                <tr class="property-description">
+                                    <td class="item-property property-description-item">48 часов</td>
+                                </tr>
+                                <tr class="property-definition">
+                                    <td class="item-property property-definition-item">Без подзарядки</td>
+                                </tr>
+                            </table>
+                        </div>
                     </article>
                 </li>
                 <li class="promo-product-item">
-                    <article>
-                        <img class="promo-product-img" src="img/promo-item-3.png" width="526" height="334" alt="Квадракоптер">
-                        <span class="promo-product-number">03</span>
-                        <h3 class="promo-product-title">Порхает как бабочка, <br>
-                            жалит как пчела!</h3>
-                        <p class="promo-product-text">Этот обычный, на первый взгляд, квадрокоптер оснащен
-                            мощным лазером, замаскированным под стандартную камеру.</p>
-                        <a class="button" href="">Подробнее</a>
-                        <table class="property-table">
-                            <tr class="property-description">
-                                <td class="property-description-item">800 м</td>
-                                <td class="property-description-item">50 метров</td>
-                            </tr>
-                            <tr class="property-definition">
-                                <td class="property-definition-item">Дальность полёта</td>
-                                <td class="property-definition-item">Радиус поражения</td>
-                            </tr>
-                        </table>
+                    <article class="promo-product-card">
+                        <div class="promo-product-wrapper">
+                            <img class="promo-product-img" src="img/promo-item-3.png" width="526" height="334" alt="Квадракоптер">
+                        </div>
+                        <div class="promo-product-wrapper promo-product-description">
+                            <span class="promo-product-number visually-hidden">03</span>
+                            <h3 class="promo-product-title">Порхает как бабочка, <br>
+                                жалит как пчела!</h3>
+                            <p class="promo-product-text">Этот обычный, на первый взгляд, квадрокоптер оснащен
+                                мощным лазером, замаскированным под стандартную камеру.</p>
+                            <a class="button promo-product-button" href="">Подробнее</a>
+                            <table class="property-table">
+                                <tr class="property-description">
+                                    <td class="item-property property-description-item">800 м</td>
+                                    <td class="item-property property-description-item">50 м</td>
+                                </tr>
+                                <tr class="property-definition">
+                                    <td class="item-property property-definition-item">Дальность полёта</td>
+                                    <td class="item-property property-definition-item">Радиус поражения</td>
+                                </tr>
+                            </table>
+                        </div>
                     </article>
                 </li>
             </ul>
         </section>
-        <section class="product-catalog">
+        <section class="product-catalog container">
             <h2 class="visually-hidden">Категории товаров</h2>
             <ul class="list product-catalog-list">
                 <li class="product-catalog-item">
@@ -178,7 +190,7 @@
                 </li>
                 <li class="product-catalog-item">
                     <a class="product-catalog-link product-catalog-monopods" href="catalog.html">
-                        Моноподы для селфи
+                        Моноподы <br> для селфи
                     </a>
                 </li>
                 <li class="product-catalog-item">
@@ -205,39 +217,41 @@
         </section>
         <section class="advantages">
             <h2 class="visually-hidden">Преимущества</h2>
-            <ul class="list advantages-slider-nav">
-                <li class="advantages-slider-item">
-                    <a class="button advantages-slider-link" href="">Доставка</a>
-                </li>
-                <li class="advantages-slider-item">
-                    <a class="button advantages-slider-link" href="">Гарантия</a>
-                </li>
-                <li class="advantages-slider-item">
-                    <a class="button advantages-slider-link" href="">Кредит</a>
-                </li>
-            </ul>
-            <ul class="list advantages-slider-content">
-                <li class="advantages-slider-page">
-                    <h3 class="title">Доставка</h3>
-                    <p class="text advantages-slider-text">Мы с удовольствием доставим ваш товар прямо к вашему
-                        подъезду совершенно бесплатно! Ведь мы неплохо
-                        заработаем, поднимая его на ваш этаж.</p>
-                </li>
-                <li class="advantages-slider-page">
-                    <h3 class="title">Гарантия</h3>
-                    <p class="text advantages-slider-text">Если из-за возгорания купленного у нас товара у вас сгорит дом —
-                        не переживайте, мы выдадим вам новый.
-                        Товар, не дом, конечно же.</p>
-                </li>
-                <li class="advantages-slider-page">
-                    <h3 class="title">Кредиты</h3>
-                    <p class="text advantages-slider-text">Залезть в долговую яму стало проще! Кредитные консультанты
-                        подберут для вас наиболее выгодные
-                        условия кредита. Выгодные для нашего банка, разумеется.</p>
-                </li>
-            </ul>
+            <div class="advantages-wrapper container">
+                <ul class="list advantages-slider-nav">
+                    <li class="advantages-slider-item">
+                        <a class="button advantages-slider-link" href="">Доставка</a>
+                    </li>
+                    <li class="advantages-slider-item">
+                        <a class="button advantages-slider-link" href="">Гарантия</a>
+                    </li>
+                    <li class="advantages-slider-item">
+                        <a class="button advantages-slider-link" href="">Кредит</a>
+                    </li>
+                </ul>
+                <ul class="list advantages-slider-content">
+                    <li class="advantages-slider-page">
+                        <h3 class="title advantages-title">Доставка</h3>
+                        <p class="text advantages-slider-text">Мы с удовольствием доставим ваш товар прямо к вашему
+                            подъезду совершенно бесплатно! Ведь мы неплохо
+                            заработаем, поднимая его на ваш этаж.</p>
+                    </li>
+                    <li class="advantages-slider-page">
+                        <h3 class="title advantages-title">Гарантия</h3>
+                        <p class="text advantages-slider-text">Если из-за возгорания купленного у нас товара у вас сгорит дом —
+                            не переживайте, мы выдадим вам новый.
+                            Товар, не дом, конечно же.</p>
+                    </li>
+                    <li class="advantages-slider-page">
+                        <h3 class="title advantages-title">Кредиты</h3>
+                        <p class="text advantages-slider-text">Залезть в долговую яму стало проще! Кредитные консультанты
+                            подберут для вас наиболее выгодные <br>
+                            условия кредита. Выгодные для нашего банка, разумеется.</p>
+                    </li>
+                </ul>
+            </div>
         </section>
-        <section class="popular-brands">
+        <section class="popular-brands container">
             <h2 class="visually-hidden">Популярные бренды</h2>
             <ul class="list popular-list">
                 <li class="popular-item">
@@ -264,10 +278,10 @@
         </section>
         <div class="index-columns container">
             <section class="about-us">
-                <h2 class="title">О нас</h2>
-                <p class="text">Огромный выбор гаджетов не оставит равнодушным гика, <br>
+                <h2 class="title about-us-title">О нас</h2>
+                <p class="text about-us-text">Огромный выбор гаджетов не оставит равнодушным гика, <br>
                     который есть в каждом из нас.</p>
-                <p class="text">Мы можем доставить ваш товар в самые отдаленные точки
+                <p class="text about-us-text">Мы можем доставить ваш товар в самые отдаленные точки
                     России! DEVICE работает со многими транспортными компаниями:</p>
                 <ul class="list about-us-list">
                     <li class="about-us-item">Деловые линии</li>
@@ -279,8 +293,8 @@
                 </a>
             </section>
             <section class="contacts">
-                <h2 class="title">Контакты</h2>
-                <p class="text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
+                <h2 class="title about-us-title">Контакты</h2>
+                <p class="text about-us-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
                     проверить работоспособность покупки. Всякое бывает.</p>
                 <a class="contacts-map" href="">
                     <img src="img/map_1.jpg" width="560" height="222" alt="Карта проезда">

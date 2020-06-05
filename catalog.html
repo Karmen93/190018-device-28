@@ -146,101 +146,107 @@
             </section>
             <section class="catalog">
                 <h2 class="visually-hidden">Каталог товаров</h2>
-                <p class="catalog-subtitle">Сортировка:</p>
-                <ul class="list sorting-list">
-                    <li class="sorting-item">
-                        <a class="sorting-link" href="">По цене</a>
-                    </li>
-                    <li class="sorting-item">
-                        <a class="sorting-link" href="">По типу</a>
-                    </li>
-                    <li class="sorting-item">
-                        <a class="sorting-link" href="">По популярности</a>
-                    </li>
-                </ul>
-                <ul class="list arrow-list">
-                    <li class="arrow-item">
-                        <a class="arrow-link arrow-up" href="">
-                            <span class="visually-hidden">Вверх</span>
-                        </a>
-                    </li>
-                    <li class="arrow-item">
-                        <a class="arrow-link arrow-down" href="">
-                            <span class="visually-hidden">Вниз</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="list catalog-list">
-                    <li class="catalog-item">
-                        <article class="catalog-card">
-                            <img class="catalog-img" src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                            <a class="button catalog-cart visually-hidden" href="">В корзину</a>
-                            <a class="catalog-compare visually-hidden" href="">Добавить к сравнению</a>
-                            <div class="catalog-info">
-                                <h3 class="catalog-title">
-                                    <a class="catalog-title-link" href="">Любительская селфи-палка</a>
-                                </h3>
-                                <p class="catalog-price">500 руб.</p>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="catalog-item">
-                        <article class="catalog-card">
-                            <img class="catalog-img" src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                            <a class="button catalog-cart visually-hidden" href="">В корзину</a>
-                            <a class="catalog-compare visually-hidden" href="">Добавить к сравнению</a>
-                            <div class="catalog-info">
-                                <h3 class="catalog-title">
-                                    <a class="catalog-title-link" href="">Профессиональная <br> селфи-палка</a>
-                                </h3>
-                                <p class="catalog-price">1 500 руб.</p>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="catalog-item">
-                        <article class="catalog-card">
-                            <img class="catalog-img" src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                            <a class="button catalog-cart visually-hidden" href="">В корзину</a>
-                            <a class="catalog-compare visually-hidden" href="">Добавить к сравнению</a>
-                            <div class="catalog-info">
-                                <h3 class="catalog-title">
-                                    <a class="catalog-title-link" href="">Непотопляемая селфи-палка</a>
-                                </h3>
-                                <p class="catalog-price">2 500 руб.</p>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="catalog-item">
-                        <article class="catalog-card">
-                            <img class="catalog-img" src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                            <a class="button catalog-cart visually-hidden" href="">В корзину</a>
-                            <a class="catalog-compare visually-hidden" href="">Добавить к сравнению</a>
-                            <div class="catalog-info">
-                                <h3 class="catalog-title">
-                                    <a class="catalog-title-link" href="">Селфи-палка «Следуй за мной»</a>
-                                </h3>
-                                <p class="catalog-price">4 900 руб.</p>
-                            </div>
-                        </article>
-                    </li>
-                </ul>
-                <ul class="list catalog-pagination-list">
-                    <li class="catalog-pagination-item">
-                        <a class="catalog-pagination-link catalog-pagination-control">Назад</a>
-                    </li>
-                    <li class="catalog-pagination-item">
-                        <a class="catalog-pagination-link catalog-pagination-number">1</a>
-                    </li>
-                    <li class="catalog-pagination-item">
-                        <a class="catalog-pagination-link catalog-pagination-number" href="">2</a>
-                    </li>
-                    <li class="catalog-pagination-item">
-                        <a class="catalog-pagination-link catalog-pagination-number" href="">3</a>
-                    </li>
-                    <li class="catalog-pagination-item">
-                        <a class="catalog-pagination-link catalog-pagination-control" href="">Вперёд</a>
-                    </li>
-                </ul>
+                <div class="sorting-wrapper">
+                    <div class="sorting-wrapper-inner">
+                        <p class="catalog-subtitle sorting-subtitle">Сортировка:</p>
+                        <ul class="list sorting-list">
+                            <li class="sorting-item">
+                                <a class="sorting-link" href="">По цене</a>
+                            </li>
+                            <li class="sorting-item">
+                                <a class="sorting-link" href="">По типу</a>
+                            </li>
+                            <li class="sorting-item">
+                                <a class="sorting-link" href="">По популярности</a>
+                            </li>
+                        </ul>
+                        <ul class="list arrow-list">
+                            <li class="arrow-item">
+                                <a class="arrow-link arrow-up" href="">
+                                    <span class="visually-hidden">Вверх</span>
+                                </a>
+                            </li>
+                            <li class="arrow-item">
+                                <a class="arrow-link arrow-down" href="">
+                                    <span class="visually-hidden">Вниз</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="catalog-container">
+                    <ul class="list catalog-list">
+                        <li class="catalog-item">
+                            <article class="catalog-card">
+                                <img class="catalog-img" src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                                <a class="button catalog-cart visually-hidden" href="">В корзину</a>
+                                <a class="catalog-compare visually-hidden" href="">Добавить к сравнению</a>
+                                <div class="catalog-info">
+                                    <h3 class="catalog-title">
+                                        <a class="catalog-title-link" href="">Любительская селфи-палка</a>
+                                    </h3>
+                                    <p class="catalog-price">500 руб.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="catalog-item">
+                            <article class="catalog-card">
+                                <img class="catalog-img" src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                                <a class="button catalog-cart visually-hidden" href="">В корзину</a>
+                                <a class="catalog-compare visually-hidden" href="">Добавить к сравнению</a>
+                                <div class="catalog-info">
+                                    <h3 class="catalog-title">
+                                        <a class="catalog-title-link" href="">Профессиональная <br> селфи-палка</a>
+                                    </h3>
+                                    <p class="catalog-price">1 500 руб.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="catalog-item">
+                            <article class="catalog-card">
+                                <img class="catalog-img" src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                                <a class="button catalog-cart visually-hidden" href="">В корзину</a>
+                                <a class="catalog-compare visually-hidden" href="">Добавить к сравнению</a>
+                                <div class="catalog-info">
+                                    <h3 class="catalog-title">
+                                        <a class="catalog-title-link" href="">Непотопляемая селфи-палка</a>
+                                    </h3>
+                                    <p class="catalog-price">2 500 руб.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="catalog-item">
+                            <article class="catalog-card">
+                                <img class="catalog-img" src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                                <a class="button catalog-cart visually-hidden" href="">В корзину</a>
+                                <a class="catalog-compare visually-hidden" href="">Добавить к сравнению</a>
+                                <div class="catalog-info">
+                                    <h3 class="catalog-title">
+                                        <a class="catalog-title-link" href="">Селфи-палка «Следуй за мной»</a>
+                                    </h3>
+                                    <p class="catalog-price">4 900 руб.</p>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                    <ul class="list catalog-pagination-list">
+                        <li class="catalog-pagination-item">
+                            <a class="catalog-pagination-link catalog-pagination-control">Назад</a>
+                        </li>
+                        <li class="catalog-pagination-item catalog-pagination-page">
+                            <a class="catalog-pagination-link catalog-pagination-number">1</a>
+                        </li>
+                        <li class="catalog-pagination-item catalog-pagination-page">
+                            <a class="catalog-pagination-link catalog-pagination-number" href="">2</a>
+                        </li>
+                        <li class="catalog-pagination-item catalog-pagination-page">
+                            <a class="catalog-pagination-link catalog-pagination-number" href="">3</a>
+                        </li>
+                        <li class="catalog-pagination-item">
+                            <a class="catalog-pagination-link catalog-pagination-control" href="">Вперёд</a>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </div>
     </main>

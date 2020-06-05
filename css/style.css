@@ -239,21 +239,16 @@ img {
 }
 
 .site-navigation-item:first-child {
-    margin-right: 311px;
+    margin-right: 285px;
 }
 
 .site-navigation-item:first-child .site-navigation-link {
-    letter-spacing: 0.1em;
     padding-right: 38px;
 }
 
 .site-navigation-item:last-child {
     margin-right: 0;
     margin-left: auto;
-}
-
-.site-navigation-item:last-child .site-navigation-link {
-    margin-right: -0.2em;
 }
 
 .site-navigation-link {
@@ -417,11 +412,6 @@ img {
 .advantages-wrapper {
     display: flex;
     align-items: baseline;
-}
-
-.advantages-slider-nav {
-    display: flex;
-    flex-direction: column;
 }
 
 .advantages-slider-item {
@@ -701,6 +691,7 @@ img {
 
 .sorting-list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .sorting-item {
@@ -817,38 +808,31 @@ img {
     padding-left: 72px;
 }
 
-.catalog-pagination-list {
+.catalog-pagination {
     display: flex;
-    align-items: baseline;
+    justify-content: space-between;
+    align-items: center;
     width: 760px;
     margin-top: 40px;
     background-color: var(--basic-grey-light);
 }
 
-.catalog-pagination-item:first-child,
-.catalog-pagination-item:last-child {
-    padding-top: 25px;
-    padding-right: 30px;
-    padding-bottom: 25px;
-    padding-left: 30px;
+.catalog-pagination-list {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.catalog-pagination-item:first-child {
-    margin-right: auto;
+.catalog-pagination-item {
+    margin-right: 30px;
 }
 
-.catalog-pagination-item:last-child {
-    margin-left: auto;
-}
-
-.catalog-pagination-page {
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.catalog-pagination-page:first-child {
+/* .catalog-pagination-item:last-child {
     margin-right: 0;
-}
+} */
 
 .catalog-pagination-link {
     font-family: "Gilroy", Arial, sans-serif;
@@ -858,6 +842,10 @@ img {
 }
 
 .catalog-pagination-control {
+    padding-top: 25px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+    padding-left: 30px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: inherit;

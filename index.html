@@ -12,14 +12,14 @@
     <div class="container">
         <header class="header">
             <nav class="main-navigation" aria-label="Главное меню">
-                <a class="logo">
+                <a class="logo header-logo">
                     <img src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина гаджетов «Device»">
                 </a>
                 <div class="header-wrapper">
                     <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                         <label class="visually-hidden" for="site-search">Поиск по сайту</label>
-                        <input class="search-form-input" type="search" name="search" id="site-search" value="Поиск по сайту">
-                        <button class="search-form-button visually-hidden" type="submit">Найти</button>
+                        <input class="search-form-input" type="search" name="search" id="site-search" placeholder="Поиск по сайту" required>
+                        <button class="search-form-button" type="submit">Найти</button>
                     </form>
                     <ul class="list user-navigation">
                         <li class="user-navigation-item">
@@ -34,9 +34,9 @@
                     </ul>
                 </div>
                 <ul class="list site-navigation header-wrapper">
-                    <li class="site-navigation-item">
-                        <a class="site-navigation-link" href="">Каталог товаров</a>
-                        <ul class="list catalog-navigation visually-hidden">
+                    <li class="site-navigation-item site-navigation-catalog">
+                        <a class="site-navigation-link site-navigation-catalog-link" href="">Каталог товаров</a>
+                        <ul class="list catalog-navigation">
                             <li class="catalog-navigation-item">
                                 <ul class="list catalog-submenu">
                                     <li class="catalog-submenu-item">
@@ -308,7 +308,7 @@
     <footer class="footer">
         <div class="container footer-wrapper">
             <div class="footer-wrapper-row">
-                <a class="logo">
+                <a class="logo footer-logo">
                     <img src="img/logo-device-yellow.svg" width="163" height="35" alt="Логотип магазина гаджетов «Device»">
                 </a>
                 <ul class="list footer-user-navigation">
@@ -383,10 +383,10 @@
             <span class="visually-hidden">Закрыть</span>
         </button>
     </section>
-    <section class="modal">
+    <section class="modal modal-map">
         <h2 class="visually-hidden">Карта проезда</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931582563!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2sde!4v1590160924040!5m2!1sru!2sde" width="994" height="593" tabindex="0" allowfullscreen></iframe>
-        <button type="button">
+        <iframe class="modal-map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931582563!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2sde!4v1590160924040!5m2!1sru!2sde" width="960" height="540" tabindex="0" allowfullscreen></iframe>
+        <button class="close-modal" type="button">
             <span class="visually-hidden">Закрыть</span>
         </button>
     </section>

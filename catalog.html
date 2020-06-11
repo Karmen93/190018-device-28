@@ -12,14 +12,14 @@
     <div class="container">
         <header class="header">
             <nav class="main-navigation" aria-label="Главное меню">
-                <a class="logo" href="index.html">
+                <a class="logo header-logo" href="index.html">
                     <img src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина гаджетов «Device»">
                 </a>
                 <div class="header-wrapper">
                     <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                         <label class="visually-hidden" for="site-search">Поиск по сайту</label>
-                        <input class="search-form-input" type="search" name="search" id="site-search" value="Поиск по сайту">
-                        <button class="search-form-button visually-hidden" type="submit">Найти</button>
+                        <input class="search-form-input" type="search" name="search" id="site-search" placeholder="Поиск по сайту" required>
+                        <button class="search-form-button" type="submit">Найти</button>
                     </form>
                     <ul class="list user-navigation">
                         <li class="user-navigation-item">
@@ -35,18 +35,18 @@
                     </ul>
                 </div>
                 <ul class="list site-navigation header-wrapper">
-                    <li class="site-navigation-item">
-                        <a class="site-navigation-link" href="">Каталог товаров</a>
-                        <ul class="list catalog-navigation visually-hidden">
+                    <li class="site-navigation-item site-navigation-catalog">
+                        <a class="site-navigation-link site-navigation-catalog-link" href="">Каталог товаров</a>
+                        <ul class="list catalog-navigation">
                             <li class="catalog-navigation-item">
                                 <ul class="list catalog-submenu">
                                     <li class="catalog-submenu-item">
                                         <a class="catalog-submenu-link" href="">Виртуальная реальность</a>
                                     </li>
-                                    <li>
+                                    <li class="catalog-submenu-item">
                                         <a class="catalog-submenu-link">Моноподы для селфи</a>
                                     </li>
-                                    <li>
+                                    <li class="catalog-submenu-item">
                                         <a class="catalog-submenu-link" href="">Экшен-камеры</a>
                                     </li>
                                 </ul>
@@ -108,23 +108,23 @@
                         <ul class="list filter-form-list">
                             <li class="filter-form-item">
                                 <input class="filter-form-checkbox" type="checkbox" name="black-color" id="filter-black" checked>
-                                <label for="filter-black">Чёрный</label>
+                                <label class="filter-form-label" for="filter-black">Чёрный</label>
                             </li>
                             <li class="filter-form-item">
                                 <input class="filter-form-checkbox" type="checkbox" name="white-color" id="filter-white">
-                                <label for="filter-white">Белый</label>
+                                <label class="filter-form-label" for="filter-white">Белый</label>
                             </li>
                             <li class="filter-form-item">
                                 <input class="filter-form-checkbox" type="checkbox" name="blue-color" id="filter-blue" checked>
-                                <label for="filter-blue">Синий</label>
+                                <label class="filter-form-label" for="filter-blue">Синий</label>
                             </li>
                             <li class="filter-form-item">
                                 <input class="filter-form-checkbox" type="checkbox" name="red-color" id="filter-red" checked>
-                                <label for="filter-red">Красный</label>
+                                <label class="filter-form-label" for="filter-red">Красный</label>
                             </li>
                             <li class="filter-form-item">
                                 <input class="filter-form-checkbox" type="checkbox" name="pink-color" id="filter-pink">
-                                <label for="filter-pink">Розовый</label>
+                                <label class="filter-form-label" for="filter-pink">Розовый</label>
                             </li>
                         </ul>
                     </fieldset>
@@ -133,11 +133,11 @@
                         <ul class="list filter-form-list">
                             <li class="filter-form-item">
                                 <input class="filter-form-radio" type="radio" name="bluetooth-group" id="filter-bluetoth-yes" value="yes" checked>
-                                <label for="filter-bluetoth-yes">Есть</label>
+                                <label class="filter-form-label" for="filter-bluetoth-yes">Есть</label>
                             </li>
                             <li class="filter-form-item">
                                 <input class="filter-form-radio" type="radio" name="bluetooth-group" id="filter-bluetoth-no" value="no">
-                                <label for="filter-bluetoth-no">Нет</label>
+                                <label class="filter-form-label" for="filter-bluetoth-no">Нет</label>
                             </li>
                         </ul>
                     </fieldset>
@@ -151,7 +151,7 @@
                         <p class="catalog-subtitle sorting-subtitle">Сортировка:</p>
                         <ul class="list sorting-list">
                             <li class="sorting-item">
-                                <a class="sorting-link" href="">По цене</a>
+                                <a class="sorting-link current">По цене</a>
                             </li>
                             <li class="sorting-item">
                                 <a class="sorting-link" href="">По типу</a>
@@ -162,14 +162,14 @@
                         </ul>
                         <ul class="list arrow-list">
                             <li class="arrow-item">
-                                <a class="arrow-link arrow-up" href="">
+                                <button class="arrow-link arrow-up" type="button">
                                     <span class="visually-hidden">Вверх</span>
-                                </a>
+                                </button>
                             </li>
                             <li class="arrow-item">
-                                <a class="arrow-link arrow-down" href="">
+                                <button class="arrow-link arrow-down current" type="button">
                                     <span class="visually-hidden">Вниз</span>
-                                </a>
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -178,9 +178,13 @@
                     <ul class="list catalog-list">
                         <li class="catalog-item">
                             <article class="catalog-card">
-                                <img class="catalog-img" src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                                <a class="button catalog-cart visually-hidden" href="">В корзину</a>
-                                <a class="catalog-compare visually-hidden" href="">Добавить к сравнению</a>
+                                <div class="catalog-img-wrapper">
+                                    <img class="catalog-img" src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                                    <div class="catalog-img-wrapper-inner">
+                                        <button class="button catalog-cart" type="button">В корзину</button>
+                                        <button class="catalog-compare" type="button">Добавить к сравнению</button>
+                                    </div>
+                                </div>
                                 <div class="catalog-info">
                                     <h3 class="catalog-title">
                                         <a class="catalog-title-link" href="">Любительская селфи-палка</a>
@@ -191,9 +195,13 @@
                         </li>
                         <li class="catalog-item">
                             <article class="catalog-card">
-                                <img class="catalog-img" src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                                <a class="button catalog-cart visually-hidden" href="">В корзину</a>
-                                <a class="catalog-compare visually-hidden" href="">Добавить к сравнению</a>
+                                <div class="catalog-img-wrapper">
+                                    <img class="catalog-img" src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                                    <div class="catalog-img-wrapper-inner">
+                                        <button class="button catalog-cart" type="button">В корзину</button>
+                                        <button class="catalog-compare" type="button">Добавить к сравнению</button>
+                                    </div>
+                                </div>
                                 <div class="catalog-info">
                                     <h3 class="catalog-title">
                                         <a class="catalog-title-link" href="">Профессиональная <br> селфи-палка</a>
@@ -204,9 +212,13 @@
                         </li>
                         <li class="catalog-item">
                             <article class="catalog-card">
-                                <img class="catalog-img" src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                                <a class="button catalog-cart visually-hidden" href="">В корзину</a>
-                                <a class="catalog-compare visually-hidden" href="">Добавить к сравнению</a>
+                                <div class="catalog-img-wrapper">
+                                    <img class="catalog-img" src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                                    <div class="catalog-img-wrapper-inner">
+                                        <button class="button catalog-cart" type="button">В корзину</button>
+                                        <button class="catalog-compare" type="button">Добавить к сравнению</button>
+                                    </div>
+                                </div>
                                 <div class="catalog-info">
                                     <h3 class="catalog-title">
                                         <a class="catalog-title-link" href="">Непотопляемая селфи-палка</a>
@@ -216,10 +228,14 @@
                             </article>
                         </li>
                         <li class="catalog-item">
-                            <article class="catalog-card">
-                                <img class="catalog-img" src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                                <a class="button catalog-cart visually-hidden" href="">В корзину</a>
-                                <a class="catalog-compare visually-hidden" href="">Добавить к сравнению</a>
+                            <article class="catalog-card catalog-card-new">
+                                <div class="catalog-img-wrapper">
+                                    <img class="catalog-img" src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                                    <div class="catalog-img-wrapper-inner">
+                                        <button class="button catalog-cart" type="button">В корзину</button>
+                                        <button class="catalog-compare" type="button">Добавить к сравнению</button>
+                                    </div>
+                                </div>
                                 <div class="catalog-info">
                                     <h3 class="catalog-title">
                                         <a class="catalog-title-link" href="">Селфи-палка «Следуй за мной»</a>
@@ -233,7 +249,7 @@
                         <a class="catalog-pagination-link catalog-pagination-control">Назад</a>
                         <ul class="list catalog-pagination-list">
                             <li class="catalog-pagination-item">
-                                <a class="catalog-pagination-link catalog-pagination-number">1</a>
+                                <a class="catalog-pagination-link catalog-pagination-number current">1</a>
                             </li>
                             <li class="catalog-pagination-item">
                                 <a class="catalog-pagination-link catalog-pagination-number" href="">2</a>
@@ -251,7 +267,7 @@
     <footer class="footer">
         <div class="container footer-wrapper">
             <div class="footer-wrapper-row">
-                <a class="logo" href="index.html">
+                <a class="logo footer-logo" href="index.html">
                     <img src="img/logo-device-yellow.svg" width="163" height="35" alt="Логотип магазина гаджетов «Device»">
                 </a>
                 <ul class="list footer-user-navigation">
@@ -267,7 +283,6 @@
                     </li>
                 </ul>
             </div>
-
             <div class="footer-wrapper-row">
                 <address class="footer-address">г. Москва, ул. Строителей, 15</address>
                 <ul class="list footer-site-navigation">

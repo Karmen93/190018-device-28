@@ -394,7 +394,8 @@ img {
     color: var(--opacity-black-6);
 }
 
-.catalog-submenu-link:active {
+.catalog-submenu-link:active,
+.catalog-submenu-link.current {
     color: var(--opacity-black-3);
 }
 
@@ -917,10 +918,7 @@ img {
     color: var(--opacity-black-6);
 }
 
-.sorting-link:active {
-    color: var(--basic-black);
-}
-
+.sorting-link:active,
 .sorting-link.current {
     color: var(--basic-black);
 }
@@ -949,7 +947,8 @@ img {
     opacity: 0.4;
 }
 
-.arrow-link:active {
+.arrow-link:active,
+.arrow-link.current {
     opacity: 1;
 }
 
@@ -960,10 +959,6 @@ img {
     height: 10px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-}
-
-.arrow-link.current {
-    opacity: 1;
 }
 
 .arrow-up::before {
@@ -1139,10 +1134,7 @@ img {
     color: var(--opacity-black-6);
 }
 
-.catalog-pagination-number:active {
-    color: var(--basic-black);
-}
-
+.catalog-pagination-number:active,
 .catalog-pagination-link.current {
     color: var(--basic-black);
 }

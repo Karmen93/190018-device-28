@@ -715,7 +715,11 @@ img {
 .advantages-slider-item.current .advantages-slider-link {
     padding-right: 134px;
     color: var(--special-yellow);
+}
+
+.advantages-slider-item.current .advantages-slider-link::before {
     background-color: var(--basic-black);
+    transform: translateY(-50%) scaleY(5);
 }
 
 .advantages-slider-link {
@@ -1008,14 +1012,24 @@ img {
 }
 
 .filter-form-category {
-    position: relative;
     padding: 0;
     margin: 0;
     border: none;
-    margin-bottom: 46px;
+    margin-bottom: 48px;
 }
 
-.filter-form-category::before {
+.filter-form-title {
+    position: relative;
+    width: 100%;
+    font-family: "Gilroy", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    margin-bottom: 30px;
+}
+
+.filter-form-title::before {
     content: '';
     position: absolute;
     left: 0;
@@ -1025,17 +1039,12 @@ img {
     background-color: var(--basic-black);
 }
 
-.filter-form-title {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.1em;
-    margin-bottom: 30px;
+.filter-checkboxes-list {
+    margin-bottom: 10px;
 }
 
 .filter-form-item {
-    margin-bottom: 22px;
+    margin-bottom: 19px;
 }
 
 .filter-form-item:last-child {
@@ -1101,6 +1110,16 @@ img {
     margin-right: 19px;
 }
 
+.range-filter-input::-webkit-outer-spin-button,
+.range-filter-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.range-filter-input {
+    -moz-appearance: textfield;
+}
+
 .range-filter-input {
     width: 60px;
     padding-top: 5px;
@@ -1113,20 +1132,59 @@ img {
     font-size: inherit;
 }
 
-.filter-form-checkbox+label,
-.filter-form-radio+label {
+.filter-form-label {
+    position: relative;
+    padding-left: 43px;
     color: var(--basic-black);
     font-size: 14px;
     line-height: 19px;
 }
 
-.filter-form-checkbox:disabled+label,
-.filter-form-radio:disabled+label {
-    color: var(--special-grey);
+.filter-form-checkbox+.filter-form-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.filter-form-label {
-    margin-left: 18px;
+.filter-form-checkbox:checked+.filter-form-label::before {
+    background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-form-radio+.filter-form-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/radio-off.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.filter-form-radio:checked+.filter-form-label::before {
+    background-image: url("../img/radio-on.svg");
+}
+
+.filter-form-checkbox+.filter-form-label:hover::before,
+.filter-form-radio+.filter-form-label:hover::before {
+    opacity: 0.6;
+}
+
+.filter-form-checkbox+.filter-form-label:active::before,
+.filter-form-radio:not(:checked)+.filter-form-label:active::before {
+    opacity: 1;
+}
+
+.filter-form-checkbox:disabled+.filter-form-label::before,
+.filter-form-checkbox:disabled+.filter-form-label,
+.filter-form-radio:disabled+.filter-form-label::before,
+.filter-form-radio:disabled+.filter-form-label {
+    opacity: 0.25;
 }
 
 .filter-form-button {
@@ -1298,6 +1356,7 @@ img {
     visibility: hidden;
     min-width: 200px;
     transform: translateX(-50%);
+    text-align: center;
 }
 
 .catalog-cart {
@@ -1307,6 +1366,7 @@ img {
 }
 
 .catalog-compare {
+    padding: 0;
     border: none;
     letter-spacing: 0.1em;
     background-color: transparent;

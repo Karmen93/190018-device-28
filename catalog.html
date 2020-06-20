@@ -102,6 +102,23 @@
                 <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
                     <fieldset class="filter-form-category">
                         <legend class="filter-form-title">Стоимость</legend>
+                        <div class="range-filter">
+                            <div class="range-filter-controls">
+                                <div class="range-filter-scale">
+                                    <div class="range-filter-bar" style="width: 57%; margin-left: 0"></div>
+                                </div>
+                                <div class="range-filter-toggle range-filter-toggle-min" tabindex="0" style="left: 0"></div>
+                                <div class="range-filter-toggle range-filter-toggle-max" tabindex="0" style="left: 57%"></div>
+                            </div>
+                            <div class="range-filter-price-controls">
+                                <label class="range-filter-price range-filter-min-price">
+                                    от <input class="range-filter-input" type="number" name="min-price" value="0">
+                                </label>
+                                <label class="range-filter-price range-filter-max-price">
+                                    до <input class="range-filter-input" type="number" name="max-price" value="5000">
+                                </label>
+                            </div>
+                        </div>
                     </fieldset>
                     <fieldset class="filter-form-category">
                         <legend class="filter-form-title">Цвет</legend>
@@ -141,7 +158,7 @@
                             </li>
                         </ul>
                     </fieldset>
-                    <button class="button" type="submit">Показать</button>
+                    <button class="button filter-form-button" type="submit">Показать</button>
                 </form>
             </section>
             <section class="catalog">

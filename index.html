@@ -85,19 +85,19 @@
             <input class="visually-hidden" type="radio" name="promo-slider-group" id="promo-slide-1" value="promo-slide-1">
             <input class="visually-hidden" type="radio" name="promo-slider-group" id="promo-slide-2" value="promo-slide-2">
             <input class="visually-hidden" type="radio" name="promo-slider-group" id="promo-slide-3" value="promo-slide-3" checked>
-            <ul class="list">
-                <li>
-                    <label for="promo-slide-1">
+            <ul class="list slider-controls">
+                <li class="slider-controls-item current">
+                    <label class="slider-controls-button" for="promo-slide-1">
                         <span class="visually-hidden">Первый слайд: самая длинная палка для селфи</span>
                     </label>
                 </li>
-                <li>
-                    <label for="promo-slide-2">
+                <li class="slider-controls-item">
+                    <label class="slider-controls-button" for="promo-slide-2">
                         <span class="visually-hidden">Второй слайд: мотивирующий фитнес-браслет</span>
                     </label>
                 </li>
-                <li>
-                    <label for="promo-slide-3">
+                <li class="slider-controls-item">
+                    <label class="slider-controls-button" for="promo-slide-3">
                         <span class="visually-hidden">Третий слайд: квадракоптер с мощным лазером</span>
                     </label>
                 </li>
@@ -105,11 +105,10 @@
             <ul class="list promo-product-list">
                 <li class="promo-product-item">
                     <article class="promo-product-card">
-                        <div class="promo-product-wrapper">
+                        <div class="promo-product-img-container">
                             <img class="promo-product-img" src="img/promo-item-1.png" width="384" height="486" alt="Самая длинная палка для селфи">
                         </div>
-                        <div class="promo-product-wrapper promo-product-description">
-                            <span class="promo-product-number visually-hidden">01</span>
+                        <div class="promo-product-description">
                             <h3 class="promo-product-title">Делай селфи, <br>
                                 как Бен Стиллер! </h3>
                             <p class="promo-product-text">Самая длинная палка для селфи доступна в нашем магазине. <br>
@@ -132,11 +131,10 @@
                 </li>
                 <li class="promo-product-item visually-hidden">
                     <article class="promo-product-card">
-                        <div class="promo-product-wrapper">
+                        <div class="promo-product-img-container">
                             <img class="promo-product-img" src="img/promo-item-2.png" width="345" height="485" alt="Фитнес-браслет">
                         </div>
-                        <div class="promo-product-wrapper promo-product-description">
-                            <span class="promo-product-number visually-hidden">02</span>
+                        <div class="promo-product-description">
                             <h3 class="promo-product-title">Худеем <br>
                                 правильно!</h3>
                             <p class="promo-product-text">Мотивирующие фитнес-браслеты помогут найти в себе силы
@@ -155,14 +153,13 @@
                 </li>
                 <li class="promo-product-item visually-hidden">
                     <article class="promo-product-card">
-                        <div class="promo-product-wrapper">
+                        <div class="promo-product-img-container">
                             <img class="promo-product-img" src="img/promo-item-3.png" width="526" height="334" alt="Квадракоптер">
                         </div>
-                        <div class="promo-product-wrapper promo-product-description">
-                            <span class="promo-product-number visually-hidden">03</span>
+                        <div class="promo-product-description">
                             <h3 class="promo-product-title">Порхает как бабочка, <br>
                                 жалит как пчела!</h3>
-                            <p class="promo-product-text">Этот обычный, на первый взгляд, квадрокоптер оснащен
+                            <p class="promo-product-text">Этот обычный, на первый взгляд, квадрокоптер оснащен <br>
                                 мощным лазером, замаскированным под стандартную камеру.</p>
                             <a class="button promo-product-button" href="">Подробнее</a>
                             <table class="property-table">
@@ -219,8 +216,8 @@
             <h2 class="visually-hidden">Преимущества</h2>
             <div class="advantages-wrapper container">
                 <ul class="list advantages-slider-nav">
-                    <li class="advantages-slider-item">
-                        <a class="button advantages-slider-link" href="">Доставка</a>
+                    <li class="advantages-slider-item current">
+                        <a class="button advantages-slider-link">Доставка</a>
                     </li>
                     <li class="advantages-slider-item">
                         <a class="button advantages-slider-link" href="">Гарантия</a>
@@ -230,19 +227,19 @@
                     </li>
                 </ul>
                 <ul class="list advantages-slider-content">
-                    <li class="advantages-slider-page">
+                    <li class="advantages-slider-page advantages-slider-delivery">
                         <h3 class="title advantages-title">Доставка</h3>
                         <p class="text advantages-slider-text">Мы с удовольствием доставим ваш товар прямо к вашему
-                            подъезду совершенно бесплатно! Ведь мы неплохо
+                            подъезду совершенно бесплатно! Ведь мы неплохо <br>
                             заработаем, поднимая его на ваш этаж.</p>
                     </li>
-                    <li class="advantages-slider-page visually-hidden">
+                    <li class="advantages-slider-page advantages-slider-warranty visually-hidden">
                         <h3 class="title advantages-title">Гарантия</h3>
                         <p class="text advantages-slider-text">Если из-за возгорания купленного у нас товара у вас сгорит дом —
-                            не переживайте, мы выдадим вам новый.
+                            не переживайте, мы выдадим вам новый. <br>
                             Товар, не дом, конечно же.</p>
                     </li>
-                    <li class="advantages-slider-page visually-hidden">
+                    <li class="advantages-slider-page advantages-slider-credit visually-hidden">
                         <h3 class="title advantages-title">Кредиты</h3>
                         <p class="text advantages-slider-text">Залезть в долговую яму стало проще! Кредитные консультанты
                             подберут для вас наиболее выгодные <br>

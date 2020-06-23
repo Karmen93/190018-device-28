@@ -70,7 +70,7 @@
 }
 
 body {
-    min-width: 1440px;
+    min-width: 1200px;
     margin: 0;
     padding: 0;
 
@@ -108,8 +108,8 @@ img {
 .container {
     width: 1160px;
     margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     box-sizing: content-box;
 }
 
@@ -647,12 +647,12 @@ img {
 .product-catalog-list {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -40px;
+    margin-left: -40px;
 }
 
 .product-catalog-item {
     width: 160px;
-    margin-right: 40px;
+    margin-left: 40px;
     margin-bottom: 20px;
 }
 
@@ -683,6 +683,10 @@ img {
 
 .product-catalog-link:active {
     color: var(--opacity-black-3);
+}
+
+.product-catalog-bracelets {
+    letter-spacing: normal;
 }
 
 .product-catalog-vr::before {
@@ -889,11 +893,11 @@ img {
     display: flex;
     flex-wrap: wrap;
 
-    margin-right: -40px;
+    margin-left: -40px;
 }
 
 .popular-item {
-    margin-right: 40px;
+    margin-left: 40px;
 }
 
 .popular-link {
@@ -1101,7 +1105,7 @@ img {
     align-items: flex-end;
     flex-grow: 1;
 
-    width: 468px;
+    width: 330px;
     padding-right: 68px;
     padding-top: 25px;
 
@@ -1322,7 +1326,7 @@ img {
 .catalog {
     flex-grow: 1;
 
-    width: 972px;
+    width: 832px;
 }
 
 .sorting-wrapper {
@@ -1557,7 +1561,6 @@ img {
 
 .catalog-container {
     padding-top: 70px;
-    padding-right: 140px;
     padding-bottom: 78px;
     padding-left: 72px;
 }

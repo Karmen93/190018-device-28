@@ -82,11 +82,11 @@
         <h1 class="visually-hidden">Главная страница магазина гаджетов "Device"</h1>
         <section class="promo container">
             <h2 class="visually-hidden">Промо-слайдер</h2>
-            <input class="visually-hidden" type="radio" name="promo-slider-group" id="promo-slide-1" value="promo-slide-1">
+            <input class="visually-hidden" type="radio" name="promo-slider-group" id="promo-slide-1" value="promo-slide-1" checked>
             <input class="visually-hidden" type="radio" name="promo-slider-group" id="promo-slide-2" value="promo-slide-2">
-            <input class="visually-hidden" type="radio" name="promo-slider-group" id="promo-slide-3" value="promo-slide-3" checked>
+            <input class="visually-hidden" type="radio" name="promo-slider-group" id="promo-slide-3" value="promo-slide-3">
             <ul class="list slider-controls">
-                <li class="slider-controls-item current">
+                <li class="slider-controls-item">
                     <label class="slider-controls-button" for="promo-slide-1">
                         <span class="visually-hidden">Первый слайд: самая длинная палка для селфи</span>
                     </label>
@@ -129,7 +129,7 @@
                         </div>
                     </article>
                 </li>
-                <li class="promo-product-item visually-hidden">
+                <li class="promo-product-item">
                     <article class="promo-product-card">
                         <div class="promo-product-img-container">
                             <img class="promo-product-img" src="img/promo-item-2.png" width="345" height="485" alt="Фитнес-браслет">
@@ -151,7 +151,7 @@
                         </div>
                     </article>
                 </li>
-                <li class="promo-product-item visually-hidden">
+                <li class="promo-product-item">
                     <article class="promo-product-card">
                         <div class="promo-product-img-container">
                             <img class="promo-product-img" src="img/promo-item-3.png" width="526" height="334" alt="Квадракоптер">
@@ -215,15 +215,18 @@
         <section class="advantages">
             <h2 class="visually-hidden">Преимущества</h2>
             <div class="advantages-wrapper container">
+                <input class="visually-hidden" type="radio" name="advantages-slider-group" id="advantages-slide-1" value="advantages-slide-1" checked>
+                <input class="visually-hidden" type="radio" name="advantages-slider-group" id="advantages-slide-2" value="advantages-slide-2">
+                <input class="visually-hidden" type="radio" name="advantages-slider-group" id="advantages-slide-3" value="advantages-slide-3">
                 <ul class="list advantages-slider-nav">
-                    <li class="advantages-slider-item current">
-                        <a class="button advantages-slider-link">Доставка</a>
+                    <li class="advantages-slider-item">
+                        <label class="button advantages-slider-link" for="advantages-slide-1">Доставка</label>
                     </li>
                     <li class="advantages-slider-item">
-                        <a class="button advantages-slider-link" href="">Гарантия</a>
+                        <label class="button advantages-slider-link" for="advantages-slide-2">Гарантия</label>
                     </li>
                     <li class="advantages-slider-item">
-                        <a class="button advantages-slider-link" href="">Кредит</a>
+                        <label class="button advantages-slider-link" for="advantages-slide-3">Кредит</label>
                     </li>
                 </ul>
                 <ul class="list advantages-slider-content">
@@ -233,13 +236,13 @@
                             подъезду совершенно бесплатно! Ведь мы неплохо <br>
                             заработаем, поднимая его на ваш этаж.</p>
                     </li>
-                    <li class="advantages-slider-page advantages-slider-warranty visually-hidden">
+                    <li class="advantages-slider-page advantages-slider-warranty">
                         <h3 class="title advantages-title">Гарантия</h3>
                         <p class="text advantages-slider-text">Если из-за возгорания купленного у нас товара у вас сгорит дом —
                             не переживайте, мы выдадим вам новый. <br>
                             Товар, не дом, конечно же.</p>
                     </li>
-                    <li class="advantages-slider-page advantages-slider-credit visually-hidden">
+                    <li class="advantages-slider-page advantages-slider-credit">
                         <h3 class="title advantages-title">Кредит</h3>
                         <p class="text advantages-slider-text">Залезть в долговую яму стало проще! Кредитные консультанты
                             подберут для вас наиболее выгодные <br>
@@ -333,7 +336,7 @@
                         <a class="footer-site-link" href="">Контакты</a>
                     </li>
                 </ul>
-                <p class="footer-tel">Тел.: +7 (495) 495-95-95</p>
+                <a class="footer-tel" href="tel:84954959595">Тел.: +7 (495) 495-95-95</a>
             </div>
             <div class="footer-wrapper-row">
                 <ul class="list social-list">
@@ -364,15 +367,15 @@
         <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post">
             <p class="modal-feedback-item">
                 <label class="modal-feedback-title" for="feedback-name">Ваше имя:</label>
-                <input class="modal-feedback-input" type="text" name="fullname" id="feedback-name" placeholder="Имя Фамилия" required>
+                <input class="modal-feedback-input modal-feedback-name" type="text" name="fullname" id="feedback-name" placeholder="Имя Фамилия">
             </p>
             <p class="modal-feedback-item">
                 <label class="modal-feedback-title" for="feedback-email">Ваш e-mail:</label>
-                <input class="modal-feedback-input" type="email" name="email" id="feedback-email" placeholder="email@example.com" required>
+                <input class="modal-feedback-input modal-feedback-email" type="email" name="email" id="feedback-email" placeholder="email@example.com">
             </p>
             <p class="modal-feedback-item modal-feedback-message">
                 <label class="modal-feedback-title" for="feedback-message">Текст письма:</label>
-                <textarea class="modal-feedback-input" name="message" id="feedback-message" placeholder="В свободной форме" required></textarea>
+                <textarea class="modal-feedback-input modal-feedback-text" name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
             </p>
             <button class="button modal-feedback-button" type="submit">Отправить</button>
         </form>
@@ -387,6 +390,7 @@
             <span class="visually-hidden">Закрыть</span>
         </button>
     </section>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

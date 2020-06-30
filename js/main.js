@@ -5,7 +5,6 @@ var feedbackForm = feedbackPopup.querySelector('.modal-feedback-form');
 var feedbackName = feedbackPopup.querySelector('.modal-feedback-name');
 var feedbackEmail = feedbackPopup.querySelector('.modal-feedback-email');
 var feedbackText = feedbackPopup.querySelector('.modal-feedback-text');
-var feedbackFields = feedbackPopup.querySelectorAll('.modal-feedback-input');
 
 var isStorageSupport = true;
 var storageName = "";
@@ -38,11 +37,24 @@ feedbackForm.addEventListener('submit', function(evt) {
         feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
         feedbackPopup.classList.add('modal-error');
 
-        feedbackFields.forEach(function(elem, idx) {
-            if (!elem.value) {
-                elem.classList.add('modal-feedback-input-error');
-            }
-        });
+        if (!feedbackName.value) {
+            feedbackName.classList.add('modal-feedback-input-error');
+        } else {
+            feedbackName.classList.remove('modal-feedback-input-error');
+        }
+
+        if (!feedbackEmail.value) {
+            feedbackEmail.classList.add('modal-feedback-input-error');
+        } else {
+            feedbackEmail.classList.remove('modal-feedback-input-error');
+        }
+
+        if (!feedbackText.value) {
+            feedbackText.classList.add('modal-feedback-input-error');
+        } else {
+            feedbackText.classList.remove('modal-feedback-input-error');
+        }
+
     } else {
         if (isStorageSupport) {
             localStorage.setItem('name', feedbackName.value);
@@ -63,6 +75,29 @@ window.addEventListener('keydown', function(evt) {
             evt.preventDefault();
             feedbackPopup.classList.remove('modal-show');
             feedbackPopup.classList.remove('modal-error');
+        }
+    }
+});
+
+var mapLink = document.querySelector('.contacts-map');
+var mapPopup = document.querySelector('.modal-map');
+var mapClose = mapPopup.querySelector('.close-modal');
+
+mapLink.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    mapPopup.classList.add('modal-show');
+});
+
+mapClose.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    mapPopup.classList.remove('modal-show');
+});
+
+window.addEventListener('keydown', function(evt) {
+    if (evt.keyCode === 27) {
+        if (mapPopup.classList.contains('modal-show')) {
+            evt.preventDefault();
+            mapPopup.classList.remove('modal-show');
         }
     }
 });

@@ -98,6 +98,7 @@ img {
 
 .page-body {
     display: grid;
+    grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
 
@@ -190,14 +191,42 @@ img {
     display: none;
 }
 
+.search-form-input::-webkit-input-placeholder {
+    color: var(--opacity-black-3);
+
+    opacity: 1;
+}
+
+.search-form-input::-moz-placeholder {
+    color: var(--opacity-black-3);
+
+    opacity: 1;
+}
+
 .search-form-input::placeholder {
     color: var(--opacity-black-3);
 
     opacity: 1;
 }
 
+.search-form-input:hover::-webkit-input-placeholder {
+    color: var(--opacity-black-6);
+}
+
+.search-form-input:hover::-moz-placeholder {
+    color: var(--opacity-black-6);
+}
+
 .search-form-input:hover::placeholder {
     color: var(--opacity-black-6);
+}
+
+.search-form-input:focus::-webkit-input-placeholder {
+    color: var(--basic-black);
+}
+
+.search-form-input:focus::-moz-placeholder {
+    color: var(--basic-black);
 }
 
 .search-form-input:focus::placeholder {
@@ -235,6 +264,8 @@ img {
     border: 2px solid var(--basic-black);
     background-color: transparent;
     opacity: 0;
+
+    cursor: pointer;
 }
 
 .search-form-button:hover {
@@ -399,12 +430,8 @@ img {
     margin-right: 65px;
 }
 
-.catalog-submenu-item {
+.catalog-submenu-item:not(:last-child) {
     margin-bottom: 16px;
-}
-
-.catalog-submenu-item:last-child {
-    margin-bottom: 0;
 }
 
 .catalog-submenu-link {
@@ -506,7 +533,6 @@ img {
 
     display: none;
     justify-content: space-between;
-    height: 506px;
     padding-left: 30px;
     padding-right: 60px;
 }
@@ -545,8 +571,8 @@ img {
 }
 
 .promo-product-description {
-    align-self: flex-end;
     width: 500px;
+    margin-top: 94px;
 }
 
 .promo-product-title {
@@ -621,11 +647,11 @@ img {
     background-color: var(--special-yellow-dark);
 
     transform: translateY(-50%);
-    transition: transform 0.3s;
+    transition: height 0.3s;
 }
 
 .button:hover::before {
-    transform: translateY(-50%) scaleY(5);
+    height: 100%;
 }
 
 .promo-product-button {
@@ -771,53 +797,40 @@ img {
     margin-bottom: 22px;
 }
 
-.advantages-slider-item:nth-child(1) .advantages-slider-link {
-    padding-right: 19px;
-    padding-left: 19px;
-}
-
-.advantages-slider-item:nth-child(2) .advantages-slider-link {
-    padding-right: 22px;
-    padding-left: 24px;
-}
-
-.advantages-slider-item:nth-child(3) .advantages-slider-link {
-    padding-right: 35px;
-    padding-left: 38px;
-}
-
 #advantages-slide-1:checked~.advantages-slider-nav .advantages-slider-link[for="advantages-slide-1"],
 #advantages-slide-2:checked~.advantages-slider-nav .advantages-slider-link[for="advantages-slide-2"],
 #advantages-slide-3:checked~.advantages-slider-nav .advantages-slider-link[for="advantages-slide-3"] {
-    width: 100%;
-
     color: var(--special-yellow);
 }
 
 #advantages-slide-1:checked~.advantages-slider-nav .advantages-slider-link[for="advantages-slide-1"]::before,
 #advantages-slide-2:checked~.advantages-slider-nav .advantages-slider-link[for="advantages-slide-2"]::before,
 #advantages-slide-3:checked~.advantages-slider-nav .advantages-slider-link[for="advantages-slide-3"]::before {
+    width: 277px;
+    height: 100%;
+
     background-color: var(--basic-black);
 
-    transform: translateY(-50%) scaleY(5);
 }
 
 .advantages-slider-link {
     display: inline-block;
-    padding-right: 24px;
-    padding-left: 24px;
+    width: 160px;
+    padding-right: 0;
+    padding-left: 0;
+
+    text-align: center;
 }
 
 .advantages-slider-link:active {
-    width: 100%;
-
     color: var(--special-yellow);
 }
 
 .advantages-slider-link:active::before {
-    background-color: var(--basic-black);
+    width: 277px;
+    height: 100%;
 
-    transform: translateY(-50%) scaleY(5);
+    background-color: var(--basic-black);
 }
 
 .advantages-slider-content {
@@ -1287,6 +1300,8 @@ img {
     font-size: 14px;
     line-height: 19px;
     color: var(--basic-black);
+
+    cursor: pointer;
 }
 
 .filter-form-checkbox+.filter-form-label::before {
@@ -1464,6 +1479,7 @@ img {
 .catalog-list {
     display: grid;
     grid-template-columns: 360px 360px;
+    -moz-column-gap: 40px;
     column-gap: 40px;
     row-gap: 48px;
 }
@@ -1541,6 +1557,9 @@ img {
 
     border: none;
     background-color: transparent;
+    outline: none;
+
+    cursor: pointer;
 }
 
 .catalog-compare:hover {
@@ -1630,7 +1649,7 @@ img {
     color: inherit;
 }
 
-.catalog-pagination-control:hover {
+.catalog-pagination-control[href]:hover {
     background-color: var(--special-grey-dark);
 }
 
@@ -1702,12 +1721,8 @@ img {
     min-width: 325px;
 }
 
-.footer-user-item {
+.footer-user-item:not(:last-child) {
     margin-right: 41px;
-}
-
-.footer-user-item:last-child {
-    margin-right: 0;
 }
 
 .footer-user-link {
@@ -1881,10 +1896,13 @@ img {
 
 .modal-show {
     display: block;
+
+    -webkit-animation: bounce 0.6s;
     animation: bounce 0.6s;
 }
 
 .modal-error {
+    -webkit-animation: shake 0.6s;
     animation: shake 0.6s;
 }
 
@@ -1981,6 +1999,7 @@ img {
     position: absolute;
     right: 20px;
     top: 20px;
+    z-index: 2;
 
     width: 55px;
     height: 55px;
@@ -2005,7 +2024,26 @@ img {
     opacity: 0.3;
 }
 
+.modal-map {
+    top: 50%;
+    bottom: auto;
+
+    height: 555px;
+
+    transform: translateY(-50%);
+}
+
+.modal-map-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
 .modal-map-iframe {
+    position: relative;
+    z-index: 2;
+
     border: none;
 }
 
@@ -2020,9 +2058,28 @@ img {
     border: 0;
 
     white-space: nowrap;
+    -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: translateY(-1000px);
+    }
+
+    70% {
+        transform: translateY(-45%);
+    }
+
+    90% {
+        transform: translateY(-55%);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
 }
 
 @keyframes bounce {
@@ -2040,6 +2097,29 @@ img {
 
     100% {
         transform: translateY(-50%);
+    }
+}
+
+@-webkit-keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0) translateY(-50%);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px) translateY(-50%);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px) translateY(-50%);
     }
 }
 
